@@ -7,21 +7,41 @@ class listNode {
     }
 }
 
-let node5 = new listNode(5);
-let node2 = new listNode(2);
-node5.next = node2;
-
 //Create List Class//
 
 class linkedList{
     constructor(head = null){
         this.head = head;
     }
+    //Create size() Method//
+
+    size() {
+    let count = 0; 
+    let node = this.head;
+    while (node) {
+        count++;
+        node = node.next
+    }
+    return count;
+    }
+
+    //Create clear() Method//
+
+    clear(){
+        this.head = null;
+    }
+    
+
+
 }
 
-let node5List = new linkedList(node5);
+
 
 
 //Testing Area//
-console.log(node5List.head.next.data)
-console.log(node5)
+let nodeOne = new listNode(1);
+let nodeTwo = new listNode(2);
+nodeOne.next = nodeTwo;
+let nodeList = new linkedList(nodeOne);
+console.log(nodeList.clear())
+
