@@ -23,5 +23,5 @@ let node5List = new linkedList(node5);
 
 
 //Testing Area//
-console.log(node5List)
+console.log(node5List.head.next.data)
 console.log(node5)
