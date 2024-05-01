@@ -31,8 +31,53 @@ class linkedList{
         this.head = null;
     }
     
+    //Create getLast() Method//
 
+    getLast(){
+        let lastNode = this.head;
+        if(lastNode){
+            while(lastNode.next){
+                lastNode = lastNode.next
+            }
+        }
+            return lastNode.data;
+        }
 
+    //Create getFirst() Method//
+
+    getFirst(){
+        let firstNode = this.head;
+        if(firstNode) {
+            firstNode = firstNode.data
+        }
+        return firstNode
+    }
+
+    //Create append() Method//
+
+    append(value){
+        let newNode = new listNode(value);
+        let firstNode = this.head;
+        newNode.next = null
+        if(firstNode){
+            while(firstNode.next != null)
+            firstNode = firstNode.next;
+        }
+        firstNode.next = newNode;
+        return this.head;
+    }
+
+    //Create prepend() Method//
+
+    prepend(value){
+        let newNode = new listNode(value);
+        let head = this.head;
+        newNode.next = head
+        head = newNode
+        return head;
+    }
+
+    //Create atIndex() Method//
 }
 
 
@@ -43,5 +88,6 @@ let nodeOne = new listNode(1);
 let nodeTwo = new listNode(2);
 nodeOne.next = nodeTwo;
 let nodeList = new linkedList(nodeOne);
-console.log(nodeList.clear())
+console.log(nodeList.prepend(3))
+
 
