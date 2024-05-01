@@ -78,6 +78,17 @@ class linkedList{
     }
 
     //Create atIndex() Method//
+
+    atIndex(value){
+        let firstNode = this.head;
+        if(firstNode){
+            for( let i = 0 ; i < value; i++)
+            firstNode = firstNode.next;
+        }
+        return firstNode.data
+    }
+
+    //Create pop() Method//
 }
 
 
@@ -88,6 +99,6 @@ let nodeOne = new listNode(1);
 let nodeTwo = new listNode(2);
 nodeOne.next = nodeTwo;
 let nodeList = new linkedList(nodeOne);
-console.log(nodeList.prepend(3))
+console.log(nodeList.atIndex(1))
 
 
