@@ -99,6 +99,6 @@ let nodeOne = new listNode(1);
 let nodeTwo = new listNode(2);
 nodeOne.next = nodeTwo;
 let nodeList = new linkedList(nodeOne);
-console.log(nodeList.atIndex(21))
+console.log(nodeList.atIndex(3))
 
 
