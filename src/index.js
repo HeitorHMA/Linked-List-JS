@@ -115,7 +115,37 @@ class linkedList{
         }
         return false
     }
-}
+
+    //Create find(value) Method//
+    
+    find(value){
+        let firstNode = this.head;
+        let index = 0
+        while(firstNode){
+            if(firstNode.data == value){
+                return index
+            }
+            else{
+            firstNode = firstNode.next;
+            index++;
+            }
+        }
+        return null
+    }
+
+    //Create toString() Method//
+
+    toString(){
+        let firstNode = this.head;
+        let string = "";
+        while(firstNode.next != null){
+            string += `(${firstNode.data})->`
+            firstNode = firstNode.next
+        }
+             string += `(${firstNode.data})-> null`
+        return string
+        }
+    }
 
 
 
@@ -125,6 +155,6 @@ let nodeOne = new listNode(1);
 let nodeTwo = new listNode(2);
 nodeOne.next = nodeTwo;
 let nodeList = new linkedList(nodeOne);
-console.log(nodeList.contains(3))
+console.log(nodeList.toString())
 
 
