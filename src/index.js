@@ -93,11 +93,11 @@ class linkedList{
     pop(){
         let firstNode = this.head;
         if(firstNode){
-            while(firstNode.next){
+            while(firstNode.next != null){
                 firstNode = firstNode.next;
             }
         firstNode = null;
-        return this.head;
+        return firstNode;
         }
     }
 }
