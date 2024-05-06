@@ -89,6 +89,17 @@ class linkedList{
     }
 
     //Create pop() Method//
+
+    pop(){
+        let firstNode = this.head;
+        if(firstNode){
+            while(firstNode.next){
+                firstNode = firstNode.next;
+            }
+        firstNode = null;
+        return this.head;
+        }
+    }
 }
 
 
@@ -99,6 +110,6 @@ let nodeOne = new listNode(1);
 let nodeTwo = new listNode(2);
 nodeOne.next = nodeTwo;
 let nodeList = new linkedList(nodeOne);
-console.log(nodeList.atIndex(3))
+console.log(nodeList.pop())
 
 
