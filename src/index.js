@@ -100,6 +100,21 @@ class linkedList{
         return firstNode;
         }
     }
+
+    //Create contains(value) Method//
+
+    contains(value){
+        let firstNode = this.head;
+        while(firstNode){
+            if(firstNode.data== value){
+                return true
+            }
+            else {
+                firstNode = firstNode.next
+            }
+        }
+        return false
+    }
 }
 
 
@@ -110,6 +125,6 @@ let nodeOne = new listNode(1);
 let nodeTwo = new listNode(2);
 nodeOne.next = nodeTwo;
 let nodeList = new linkedList(nodeOne);
-console.log(nodeList.pop())
+console.log(nodeList.contains(3))
 
 
